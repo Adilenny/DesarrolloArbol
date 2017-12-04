@@ -11,17 +11,17 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Button fx:id="contarBtn" layoutX="16.0" layoutY="232.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Contar Nodo" textFill="#0c556b">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="MinimoBtn" layoutX="16.0" layoutY="288.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Nodo Minimo" textFill="#0c556b">
+      <Button fx:id="minimoBtn" layoutX="16.0" layoutY="288.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Nodo Minimo" textFill="#0c556b">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></Button>
-      <Button fx:id="MaximoBtn" layoutX="16.0" layoutY="344.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Nodo Máximo" textFill="#0c556b">
+      <Button fx:id="maximoBtn" layoutX="16.0" layoutY="344.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="97.0" text="Nodo Máximo" textFill="#0c556b">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font></Button>
@@ -30,7 +30,7 @@
             <Font name="System Bold Italic" size="13.0" />
          </font></Button>
       <ComboBox fx:id="metodosCbx" layoutX="14.0" layoutY="127.0" prefHeight="37.0" prefWidth="141.0" />
-      <TextField fx:id="BuscarTxt" layoutX="16.0" layoutY="182.0" />
+      <TextField fx:id="buscarTxt" layoutX="16.0" layoutY="182.0" />
       <Label layoutX="175.0" layoutY="14.0" text="-- Árbol Binario --">
          <font>
             <Font name="News701 BT Bold" size="32.0" />
@@ -47,7 +47,7 @@
       <Label fx:id="textoLbl" layoutX="308.0" layoutY="356.0" prefHeight="48.0" prefWidth="265.0" />
       <ImageView fitHeight="262.0" fitWidth="294.0" layoutX="299.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/a1.png" />
+            <Image url="@../imagenes/a1.png" />
          </image>
       </ImageView>
       <Label layoutX="16.0" layoutY="97.0" text="Métodos" textFill="#0c556b">

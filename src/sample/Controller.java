@@ -34,23 +34,34 @@ public class Controller implements Initializable {
         metodosCbx.getItems().addAll("PreOrden", "InOrden", "PostOrden");
     }
 
-    public static void main (String[] args){
-        Controller arbol = new Controller();
-        NodoArbol raiz = new NodoArbol(1);
-        NodoArbol nodo2 = new NodoArbol(2);
-        NodoArbol  nodo3 = new NodoArbol(3);
-
-        nodo3.setNodoDerecho(new NodoArbol(6));
-        nodo3.setNodoIzquierdo(new NodoArbol(5));
-        nodo2.setNodoIzquierdo(new NodoArbol(4));
-        raiz.setNodoIzquierdo(nodo2);
-        raiz.setNodoDerecho(nodo3);
-
-        arbol.PreOrden(raiz);
-    }
+    Metodos metodos= new Metodos();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        Controller arbol = new Controller();
+        NodoArbol nodo1 = new NodoArbol(1);
+        nodo1.setNodoIzquierdo(new NodoArbol(10));
+        nodo1.setNodoDerecho(new NodoArbol(11));
+        NodoArbol nodo2 = new NodoArbol(6);
+        NodoArbol nodo3 = new NodoArbol(5);
+        nodo3.setNodoIzquierdo(nodo2);
+        nodo3.setNodoDerecho(nodo1);
+        NodoArbol nodo4 = new NodoArbol(3);
+        NodoArbol nodo5 = new NodoArbol(7);
+        nodo5.setNodoIzquierdo(nodo4);
+        nodo5.setNodoDerecho(nodo3);
+        NodoArbol raiz = new NodoArbol(8);
+        raiz.setNodoIzquierdo(nodo5);
+        NodoArbol nodo6 = new NodoArbol(2);
+        nodo6.setNodoIzquierdo(new NodoArbol(12));
+        nodo6.setNodoDerecho(new NodoArbol(22));
+        NodoArbol nodo7 = new NodoArbol(4);
+        NodoArbol nodo8 = new NodoArbol(9);
+        nodo8.setNodoIzquierdo(nodo7);
+        nodo8.setNodoDerecho(nodo6);
+        raiz.setNodoDerecho(nodo8);
+
+
         this.minimoBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -60,6 +71,7 @@ public class Controller implements Initializable {
         this.maximoBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                metodos.PreOrden(raiz);
 
             }
         });
@@ -76,15 +88,5 @@ public class Controller implements Initializable {
             }
         });
     }
-
-    private static void PreOrden(NodoArbol raiz){
-        if(raiz != null){
-            System.out.println(raiz.getValor() + " ");
-            PreOrden(raiz.getNodoIzquierdo());
-            PreOrden(raiz.getNodoDerecho());
-        }
-    }
-
-
 
 }
