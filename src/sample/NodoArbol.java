@@ -3,6 +3,7 @@ package sample;
 public class NodoArbol {
     private NodoArbol  nodoIzquierdo = null , nodoDerecho = null;
     private  int valor;
+    public int dato;
 
     public NodoArbol (int valor){
         this.valor = valor;

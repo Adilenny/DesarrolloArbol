@@ -29,4 +29,21 @@ public class Metodos {
         }
     }
 
+    public NodoArbol buscarNodo(int d){
+        NodoArbol raiz = null;
+        NodoArbol aux=raiz;
+        while(aux.dato!=d){
+            if(d<aux.dato){
+                aux=aux.getNodoDerecho();
+            }else{
+                aux=aux.getNodoDerecho();
+
+            }
+            if(aux==null){
+                return null;
+            }
+        }
+        return aux;
+    }
+
 }
