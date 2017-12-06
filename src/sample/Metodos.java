@@ -29,21 +29,21 @@ public class Metodos {
         }
     }
 
-    public NodoArbol buscarNodo(int d){
+    public String buscarNodo(int d){
         NodoArbol raiz = null;
         NodoArbol aux=raiz;
-        while(aux.dato!=d){
-            if(d<aux.dato){
-                aux=aux.getNodoDerecho();
+        while(aux.getDato() !=d){
+            if(d< aux.getDato()){
+                aux=aux.nodoIzquierdo;
             }else{
-                aux=aux.getNodoDerecho();
+                aux=aux.nodoDerecho;
 
             }
             if(aux==null){
-                return null;
+                return d + "No fue encontrado";
             }
         }
-        return aux;
+        return d + "fue encontrado";
     }
 
 }

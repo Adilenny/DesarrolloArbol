@@ -1,9 +1,9 @@
 package sample;
 
 public class NodoArbol {
-    private NodoArbol  nodoIzquierdo = null , nodoDerecho = null;
+    public NodoArbol  nodoIzquierdo  , nodoDerecho;
     private  int valor;
-    public int dato;
+    private int dato;
 
     public NodoArbol (int valor){
         this.valor = valor;
@@ -27,5 +27,13 @@ public class NodoArbol {
 
     public int getValor(){
         return valor;
+    }
+
+    public int getDato() {
+        return dato;
+    }
+
+    public void setDato(int dato) {
+        this.dato = dato;
     }
 }
