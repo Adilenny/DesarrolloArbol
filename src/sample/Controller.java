@@ -73,7 +73,6 @@ public class Controller implements Initializable {
         this.maximoBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                metodos.PreOrden(raiz);
 
             }
         });
@@ -101,7 +100,6 @@ public class Controller implements Initializable {
                     JOptionPane.showMessageDialog(null, "¡Selecciona el método porfavor!");
                 }else{
                     if (met.equals("PreOrden")){
-                        metodos.PreOrden(null);
                         textoLbl.setText(" injks");
                     }
                 }
