@@ -14,6 +14,8 @@ public class Metodos {
 
     int cantidad;
     private int tamaño=0;
+    int max=0;
+    int min=10000;
 
     public void PreOrden(NodoArbol raiz, Label label) {
         if (raiz != null) {
@@ -46,6 +48,31 @@ public class Metodos {
             tamaño(raiz.getNodoDerecho());
         }
         return "El tamaño del arbol es "+ cantidad + " nodos";
+    }
+    public String maximo(NodoArbol raiz){
+        if(raiz!=null){
+            if(max<raiz.getValor()){
+                max=raiz.getValor();
+            }
+            maximo(raiz.getNodoIzquierdo());
+            maximo(raiz.getNodoDerecho());
+
+        }
+        return "El valor máximo es: "+max;
+    }
+
+
+
+    public String minimo(NodoArbol raiz){
+        if(raiz!=null){
+            if(min<raiz.getValor()){
+                min=raiz.getValor();
+            }
+            minimo(raiz.getNodoIzquierdo());
+            minimo(raiz.getNodoDerecho());
+
+        }
+        return "El valor minimo es: "+min;
     }
 
 
