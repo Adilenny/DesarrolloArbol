@@ -11,6 +11,10 @@ import java.awt.*;
  */
 public class Metodos {
 
+
+    int cantidad;
+    private int tamaño=0;
+
     public void PreOrden(NodoArbol raiz, Label label) {
         if (raiz != null) {
             System.out.println(raiz.getValor() + " ");
@@ -34,4 +38,17 @@ public class Metodos {
             System.out.println(raiz.getValor() + " ");
         }
     }
+
+    public String tamaño(NodoArbol raiz){//recibe un paranetro en este caso es raiz
+        if(raiz != null){//condicion para saber si la raiz esta vacia
+            cantidad++;//incrementa la varibale cantidad de uno en uno
+            tamaño(raiz.getNodoIzquierdo());
+            tamaño(raiz.getNodoDerecho());
+        }
+        return "El tamaño del arbol es "+ cantidad + " nodos";
+    }
+
+
+
+
 }
