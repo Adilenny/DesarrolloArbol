@@ -37,7 +37,7 @@ public class Controller implements Initializable {
     Metodos metodos= new Metodos();
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) { // se  meten todos los nodos en crenado nuevo nodo
         Controller arbol = new Controller();
         NodoArbol nodo1 = new NodoArbol(1);
         nodo1.setNodoIzquierdo(new NodoArbol(10));
@@ -50,8 +50,8 @@ public class Controller implements Initializable {
         NodoArbol nodo5 = new NodoArbol(7);
         nodo5.setNodoIzquierdo(nodo4);
         nodo5.setNodoDerecho(nodo3);
-        NodoArbol raiz = new NodoArbol(8);
-        raiz.setNodoIzquierdo(nodo5);
+        NodoArbol raiz = new NodoArbol(8);// se crea el nodo raiz y se coloca su valor
+        raiz.setNodoIzquierdo(nodo5); // se coloca la raiz y manda a llama a traer el valor del  lado izquierdo
         NodoArbol nodo6 = new NodoArbol(2);
         nodo6.setNodoIzquierdo(new NodoArbol(12));
         nodo6.setNodoDerecho(new NodoArbol(22));
@@ -59,7 +59,7 @@ public class Controller implements Initializable {
         NodoArbol nodo8 = new NodoArbol(9);
         nodo8.setNodoIzquierdo(nodo7);
         nodo8.setNodoDerecho(nodo6);
-        raiz.setNodoDerecho(nodo8);
+        raiz.setNodoDerecho(nodo8);// se coloca la raiz y manda a llama a traer el valor del lado derecho
 
 
         this.minimoBtn.setOnAction(new EventHandler<ActionEvent>() {
